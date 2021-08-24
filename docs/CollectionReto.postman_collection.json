@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "659056a5-f7df-48d2-8015-acb2f2488aed",
+		"name": "CollectionReto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/challenge/v1.0/average",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"matriz\": [4,2,3,3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/challenge/v1.0/sumArray",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"challenge",
+						"v1.0",
+						"sumArray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/challenge/v1.0/sumArray",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"matriz\": [4,2,3,3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/challenge/v1.0/sumAray",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"challenge",
+						"v1.0",
+						"sumAray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/challenge/v1.0/manipulation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"texto\":\"hi!!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/challenge/v1.0/manipulation",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"challenge",
+						"v1.0",
+						"manipulation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/challenge/v1.0/transform",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"matriz\": [[\"hola\", 12],[\"SARA\", 5],[\"mike\", 2]],\r\n    \"order\": \"ASC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/challenge/v1.0/transform",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"challenge",
+						"v1.0",
+						"transform"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/challenge/v1.0/arrayScore",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"matriz\":  [0,1,2,3,4,5]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/challenge/v1.0/arrayScore",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"challenge",
+						"v1.0",
+						"arrayScore"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "b",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/challenge/v1.0/coordinadora{codigo}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/challenge/v1.0/coordinadora/734380016861001",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"challenge",
+						"v1.0",
+						"coordinadora",
+						"734380016861001"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "b",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

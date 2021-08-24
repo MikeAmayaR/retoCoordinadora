@@ -8,7 +8,7 @@ npm i - npm install
 npm start
 
 ### Collection Postman
-Incluido en el repositorio va la colleción de postman donde se pueden probar los ejercicios
+Incluido en el repositorio, dentro de la carpeta "docs" está la colleción de postman donde se pueden probar los ejercicios
 
 ### Respuesta Preguntas
 1.	Con sus propias palabras explique que es una inyección de dependencias y para qué sirve
