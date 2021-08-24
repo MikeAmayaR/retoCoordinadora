@@ -1,0 +1,398 @@
+openapi: 3.0.0
+info:
+  title: Challenge
+  version: '1.0.0'
+  description: swagger del reto técnico de Coordinadora
+  contact:
+    name: Michael Amaya
+servers:
+  - url: 'http://localhost:3000/challenge/v1.0/'
+paths:
+  /average:
+    post:
+      summary: ''
+      operationId: average
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                  message:
+                    type: string
+                  type:
+                    type: string
+                  data:
+                    type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                a:
+                  type: number
+                b:
+                  type: number
+              required:
+                - a
+                - b
+                
+  /manipulation:
+    post:
+      summary: ''
+      operationId: manipulation
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                  message:
+                    type: string
+                  type:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      texto:
+                        type: string
+          
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                texto:
+                  type: string
+              required:
+                - texto
+  /sumArray:
+    post:
+      summary: ''
+      operationId: sumArray
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                  message:
+                    type: string
+                  type:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      sumaMatriz:
+                        type: number
+                      sumaEnteros:
+                        type: number
+                      sumaPares:
+                       type: number
+                      sumaImpares:
+                        type: number
+          
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                matriz:
+                  type: object
+              required:
+                - matriz
+  /transform:
+    post:
+      summary: ''
+      operationId: transform
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                  message:
+                    type: string
+                  type:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      response:
+                        type: object
+          
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                matriz:
+                  type: object
+                order:
+                  type: string
+              required:
+                - matriz
+                - order
+  /arrayScore:
+    post:
+      summary: ''
+      operationId: arrayScore
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                  message:
+                    type: string
+                  type:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      result:
+                        type: object
+          
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                matriz:
+                  type: object
+              required:
+                - matriz
+                
+  '/coordinadora{codigo}':
+    get:
+      summary: procedures
+      responses:
+        '200':
+         description: OK
+         content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                  message:
+                    type: string
+                  type:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                           etiqueta:
+                            type: string
+                      informacion_guia:
+                        type: object
+                        properties:
+                           codigo_remision:
+                            type: string
+                           nombre_destinatario:
+                            type: string
+                           dir_destinatario:
+                            type: string 
+                      cantidad_checkpoints:
+                        type: number
+                      tracking:
+                        type: object
+                        properties:
+                          checkpoint:
+                           type: string
+                          tipo:
+                           type: string
+      operationId: coordinadora
+      parameters: []
+    parameters:
+      - schema:
+          type: integer
+        name: codigo
+        in: path
+        required: true
+        description: Codigo
+components:
+  schemas:
+    average.Response:
+      title: average.Respone
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        type:
+          type: string
+        data:
+          type: object
+          properties:
+            suma:
+             type: integer
+      required:
+        - code
+        - message
+        - type
+        - data
+    manipulation.Result:
+      title: manipulation.Response
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        type:
+          type: string
+        data:
+          type: object
+          properties:
+                texto:
+                  type: string
+      required:
+        - code
+        - message
+        - type
+        - data
+        
+    sumArray.Result:
+      title: sumArray.Response
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        type:
+          type: string
+        data:
+          type: object
+          properties:
+                sumaMatriz:
+                  type: number
+                sumaEnteros:
+                  type: number
+                sumaPares:
+                  type: number
+                sumaImpares:
+                  type: number
+      required:
+        - code
+        - message
+        - type
+        - data
+        
+    transform.Result:
+      title: transform.Response
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        type:
+          type: string
+        data:
+          type: object
+          properties:
+                response:
+                  type: object
+      required:
+        - code
+        - message
+        - type
+        - data
+        
+    arrayScore.Result:
+      title: arrayScore.Response
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        type:
+          type: string
+        data:
+          type: object
+          properties:
+                result:
+                  type: object
+      required:
+        - code
+        - message
+        - type
+        - data
+        
+    coordinadora.Result:
+      title: coordinadora.Response
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        type:
+          type: string
+        data:
+          type: object
+          properties:
+                data:
+                  type: object
+                  properties:
+                      data:
+                        type: object
+                        properties:
+                           etiqueta:
+                            type: string
+                      informacion_guia:
+                        type: object
+                        properties:
+                           codigo_remision:
+                            type: string
+                           nombre_destinatario:
+                            type: string
+                           dir_destinatario:
+                            type: string 
+                      cantidad_checkpoints:
+                        type: number
+                      tracking:
+                        type: object
+                        properties:
+                          checkpoint:
+                           type: string
+                          tipo:
+                           type: string
+      required:
+        - code
+        - message
+        - type
+        - data
